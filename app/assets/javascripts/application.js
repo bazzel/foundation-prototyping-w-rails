@@ -14,6 +14,15 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= require handlebars
+//= require ember
+//= require ember-data
+//= require_self
+//= require ember-app
+
+// for more details see: http://emberjs.com/guides/application/
+App = Ember.Application.create();
+
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

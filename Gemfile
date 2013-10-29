@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'ember-rails'            # Ember for Rails 3.1+
+gem 'ember-source', '1.1.2'  # Ember.js source code wrapper for use with Ruby libs.
 gem 'haml'
 gem 'rails', '4.0.0'         # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'sass-rails', '~> 4.0.0' # Use SCSS for stylesheets
