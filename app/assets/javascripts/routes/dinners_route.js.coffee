@@ -14,3 +14,12 @@ App.DinnersUpcomingRoute = Em.Route.extend
   renderTemplate: (controller) ->
     @render 'dinners/index',
       controller: controller
+
+App.DinnersPastRoute = Em.Route.extend
+  model: ->
+    @get('store').filter('dinner', (item) ->
+      item.get('startsAt') <= new Date()
+    )
+  renderTemplate: (controller) ->
+    @render 'dinners/index',
+      controller: controller

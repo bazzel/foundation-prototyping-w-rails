@@ -5,4 +5,5 @@ App.Router.map ->
     path: '/'
   , ->
     @route 'upcoming'
+    @route 'past'
 
