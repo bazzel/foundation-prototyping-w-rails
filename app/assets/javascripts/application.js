@@ -17,7 +17,7 @@
 //= require turbolinks
 //= require handlebars
 //= require ember
-//= require ember-data
+//= require ember/ember-data
 //= require_self
 //= require ember-app
 
