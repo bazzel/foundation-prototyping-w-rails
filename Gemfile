@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'compass-rails', '~> 2.0.alpha.0'
 gem 'ember-rails'            # Ember for Rails 3.1+
 gem 'ember-source', '1.1.2'  # Ember.js source code wrapper for use with Ruby libs.
 gem 'haml'
+gem 'momentjs-rails'         # Moment.js is a lightweight javascript date library for parsing, manipulating, and formatting dates.
 gem 'rails', '4.0.0'         # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'sass-rails', '~> 4.0.0' # Use SCSS for stylesheets
 gem 'sqlite3'                # Use sqlite3 as the database for Active Record

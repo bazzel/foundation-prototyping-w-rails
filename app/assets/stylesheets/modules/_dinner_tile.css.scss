@@ -1,0 +1,7 @@
+@import 'compass/typography/text/ellipsis';
+
+.dinner-tile {
+  .venue {
+    @include ellipsis;
+  }
+}
