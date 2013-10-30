@@ -13,11 +13,12 @@
 </div>
 <div class='row'>
   <div class='large-12 columns'>
-    <ul class='breadcrumbs'>
-      <li>{{#link-to 'dinners' activeClass='current'}}All{{/link-to}}</li>
-      <li>{{#link-to 'dinners.upcoming' activeClass='current'}}Upcoming{{/link-to}}</li>
-      <li>{{#link-to 'dinners.past' activeClass='current'}}Past{{/link-to}}</li>
+    <nav class='breadcrumbs'>
+      {{#link-to 'dinners.index' activeClass='current'}}All{{/link-to}}
+      {{#link-to 'dinners.upcoming' activeClass='current'}}Upcoming{{/link-to}}
+      {{#link-to 'dinners.past' activeClass='current'}}Past{{/link-to}}
     </nav>
+    </br>
   </div>
 </div>
 <div class='row'>

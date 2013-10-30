@@ -1,2 +1,1 @@
-App.DinnersIndexController = Em.ArrayController.extend
-  sortProperties: ['startsAt']
+App.DinnersIndexController = App.DinnersController.extend()
