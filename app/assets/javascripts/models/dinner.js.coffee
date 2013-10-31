@@ -20,14 +20,14 @@ App.Dinner.FIXTURES = [
   startsAt: new Date(2012, 3, 18, 18, 30)
 ,
   id: 5
-  venue: 'Q4'
+  venue: 'Bretelli'
   startsAt: new Date(2016, 11, 10, 17)
 ,
   id: 6
-  venue: 'Q4'
+  venue: 'De Oude Munt'
   startsAt: new Date(2015, 11, 10, 17)
 ,
   id: 7
-  venue: 'Q4'
+  venue: 'Rhodos'
   startsAt: new Date(2013, 11, 10, 17)
 ]
