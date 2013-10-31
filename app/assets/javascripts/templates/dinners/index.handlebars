@@ -5,7 +5,7 @@
         <h4 class='venue subheader'>{{venue}}</h4>
         <h4>{{formattedStartTime}}</h4>
         <p>{{formattedStartDate}}</p>
-        <a class='tiny secondary button' href='#'>Details</a>
+        {{#link-to 'dinner' this class='tiny secondary button'}}Details{{/link-to}}
       </div>
     </div>
   {{/each}}

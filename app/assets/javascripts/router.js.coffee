@@ -5,3 +5,6 @@ App.Router.map ->
     @route 'upcoming'
     @route 'past'
 
+  @resource 'dinner',
+    path: 'dinners/:dinner_id'
+
