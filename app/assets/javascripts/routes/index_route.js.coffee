@@ -1,3 +1,3 @@
 App.IndexRoute = Em.Route.extend
   beforeModel: ->
-    @transitionTo 'dinners'
+    @transitionTo 'dinners.upcoming'
