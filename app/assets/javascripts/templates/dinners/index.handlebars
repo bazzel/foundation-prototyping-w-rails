@@ -1,10 +1,10 @@
 <div class='row'>
-  {{#each itemController='dinnerItem'}}
-    <div class='large-3 columns dinner-tile'>
-      <div class='panel'>
+  {{#each}}
+    <div class='large-3 columns'>
+      <div class='panel dinner-tile'>
         <h4 class='venue subheader'>{{venue}}</h4>
-        <h4>{{formattedStartTime}}</h4>
-        <p>{{formattedStartDate}}</p>
+        <h4>{{format-date startsAt 'h:mm a'}}</h4>
+        <p>{{format-date startsAt 'ddd, ll'}}</p>
         {{#link-to 'dinner' this class='tiny secondary button'}}Details{{/link-to}}
       </div>
     </div>
