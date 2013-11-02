@@ -1,0 +1,9 @@
+@import 'compass';
+
+.employee-list {
+  ul {
+    text-align: center;
+    @include no-bullets;
+  }
+}
+
