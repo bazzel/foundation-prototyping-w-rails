@@ -4,7 +4,7 @@ App.MapCanvasComponent = Em.Component.extend
     #https://developers.google.com/maps/documentation/javascript/examples/marker-simple
     myLatlng = new google.maps.LatLng(@get('dinner.lat'), @get('dinner.lng'))
     mapOptions =
-      zoom: 16
+      zoom: 17
       center: myLatlng
       mapTypeId: google.maps.MapTypeId.ROADMAP
 
