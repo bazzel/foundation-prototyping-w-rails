@@ -5,9 +5,9 @@
         <p class="title" data-section-title><a href="#">{{name}}</a></p>
         <div class="content" data-section-content>
           <ul>
-            <li>Patrick Baselier</li>
-            <li>Rudi van der Made</li>
-            <li>Jean Mertz</li>
+            {{#each consumers}}
+              <li>{{name}}</li>
+            {{/each}}
           </ul>
         </div>
       </section>
