@@ -1,3 +1,3 @@
-App.StartersView = Em.View.extend
+App.StarterView = Em.View.extend
   didInsertElement: ->
     @$().foundation()

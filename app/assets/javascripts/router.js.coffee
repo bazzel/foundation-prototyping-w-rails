@@ -8,7 +8,7 @@ App.Router.map ->
   @resource 'dinner',
     path: 'dinners/:dinner_id'
   , ->
-    @resource 'starters'
+    @resource 'starter'
     @resource 'main'
     @resource 'dessert'
 
