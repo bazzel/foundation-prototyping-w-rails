@@ -1,3 +1,3 @@
-App.MainView = Em.View.extend
+App.MainCourseView = Em.View.extend
   didInsertElement: ->
     @$().foundation()

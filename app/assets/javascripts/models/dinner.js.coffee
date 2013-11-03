@@ -4,6 +4,7 @@ App.Dinner = DS.Model.extend
   address: DS.attr 'string'
   lat: DS.attr 'number'
   lng: DS.attr 'number'
+  mainCourse: DS.belongsTo 'mainCourse'
 
 App.Dinner.FIXTURES = [
   id: 1
@@ -12,6 +13,11 @@ App.Dinner.FIXTURES = [
   address: 'Emmasingel 60, 6001 BD Weert'
   lat: 51.256074
   lng: 5.705399
+  mainCourse: 1
+  starter:
+    name: 'Starter'
+  dessert:
+    name: 'Dessert'
 ,
   id: 2
   venue: 'Brasserie De Oude markt'

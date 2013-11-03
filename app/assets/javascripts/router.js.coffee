@@ -9,6 +9,7 @@ App.Router.map ->
     path: 'dinners/:dinner_id'
   , ->
     @resource 'starter'
-    @resource 'main'
+    @resource 'mainCourse',
+      path: 'main-course'
     @resource 'dessert'
 
