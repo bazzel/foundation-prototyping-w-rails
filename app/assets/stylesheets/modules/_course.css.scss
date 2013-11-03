@@ -1,9 +1,13 @@
 @import 'compass';
 
-.employee-list {
+.course {
   ul {
     text-align: center;
     @include no-bullets;
   }
+  .title {
+    a {
+      @include ellipsis;
+    }
+  }
 }
-

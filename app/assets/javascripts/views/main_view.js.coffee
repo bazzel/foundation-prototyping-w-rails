@@ -1,3 +1,3 @@
-App.DinnerView = Em.View.extend
+App.MainView = Em.View.extend
   didInsertElement: ->
     @$().foundation()

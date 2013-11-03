@@ -28,63 +28,11 @@
     <hr/>
     <h2>Who's eating what?</h2>
     <nav class='breadcrumbs'>
-      <a href='#' class='current'>Starters</a>
-      <a href='#'>Main</a>
-      <a href='#'>Dessert</a>
+      {{#link-to 'starters'}}Starters{{/link-to}}
+      {{#link-to 'main'}}Main{{/link-to}}
+      {{#link-to 'dessert'}}Dessert{{/link-to}}
     </nav>
     </br>
-    <h3 class='subheader'>Starters</h3>
-    <div class="section-container vertical-tabs" data-section="vertical-tabs">
-      <section class="active">
-        <p class="title" data-section-title><a href="#">Antipasto Misto all ’Italiana</a></p>
-        <div class="content employee-list" data-section-content>
-          <ul>
-            <li>Ariejan de Vroom</li>
-            <li>Arjan van der Gaag</li>
-            <li>Jean Mertz</li>
-          </ul>
-        </div>
-      </section>
-      <section>
-        <p class="title" data-section-title><a href="#">Zuppa di Pomodoro</a></p>
-        <div class="content employee-list" data-section-content>
-          <ul>
-            <li>Johan Hoekjan</li>
-            <li>Joost Saanen</li>
-            <li>João Bernardino</li>
-            <li>Marco Langenhuizen</li>
-            <li>Niels Stevens</li>
-            <li>Patrick Baselier</li>
-            <li>Rudi van der Made</li>
-          </ul>
-        </div>
-      </section>
-      <section>
-        <p class="title" data-section-title><a href="#">Calamari in Umido</a></p>
-        <div class="content employee-list" data-section-content>
-          <ul>
-            <li>Sander Voerman</li>
-            <li>Yvon Winkelmolen</li>
-          </ul>
-        </div>
-      </section>
-      <section>
-        <p class="title" data-section-title><a href="#">Minestrone Ligure</a></p>
-        <div class="content employee-list" data-section-content>
-          <ul>
-            <li>Rui Salgado</li>
-            <li>andy.maes@kabisa.nl</li>
-            <li>Bas Heijmann</li>
-            <li>Giel Raijmakers</li>
-            <li>Harm de Laat</li>
-            <li>Matthijs Groen</li>
-            <li>Michel de Graaf</li>
-            <li>Pascal Widdershoven</li>
-            <li>Ralph Deguelle</li>
-            <li>Remco Huijdts</li>
-          </ul>
-        </div>
-      </section>
-    </div>
+    {{outlet}}
   </div>
 </div>
