@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20131104191432) do
 
   create_table "dishes", force: true do |t|
     t.string   "name"
-    t.integer  "starter_id"
+    t.integer  "course_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
