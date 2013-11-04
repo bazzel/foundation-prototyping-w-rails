@@ -46,5 +46,6 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :development do
+  gem 'faker'
   gem 'html2haml'
 end

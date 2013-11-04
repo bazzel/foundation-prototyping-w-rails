@@ -3,3 +3,4 @@
 App.Store = DS.Store.extend
   adapter: DS.FixtureAdapter.extend()
 
+App.DinnerAdapter = DS.RESTAdapter.extend()

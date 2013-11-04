@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  venue: MyString
+  starts_at: 2013-11-04 17:11:21
+  address: MyString
+  lat: 1
+  lng: 1
+
+two:
+  venue: MyString
+  starts_at: 2013-11-04 17:11:21
+  address: MyString
+  lat: 1
+  lng: 1
