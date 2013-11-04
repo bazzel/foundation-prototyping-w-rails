@@ -26,4 +26,20 @@ App.Dish.FIXTURES = [
   id: 6
   name: 'Gamberoni all’ aglio e Vino Bianco'
   consumers: [16,17,18,19,20,21,22,23]
+,
+  id: 7
+  name: 'Antipasto Misto all ’Italiana'
+  consumers: [13,14,15]
+,
+  id: 8
+  name: 'Zuppa di Pomodoro'
+  consumers: [4,5,6]
+,
+  id: 9
+  name: 'Calamari in Umido'
+  consumers: [7,8,9]
+,
+  id: 10
+  name: 'Minestrone Ligure'
+  consumers: [1,2,3]
 ]

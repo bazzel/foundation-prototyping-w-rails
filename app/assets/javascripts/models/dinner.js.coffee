@@ -4,6 +4,7 @@ App.Dinner = DS.Model.extend
   address: DS.attr 'string'
   lat: DS.attr 'number'
   lng: DS.attr 'number'
+  starter: DS.belongsTo 'starter'
   mainCourse: DS.belongsTo 'mainCourse'
 
 App.Dinner.FIXTURES = [
@@ -14,8 +15,7 @@ App.Dinner.FIXTURES = [
   lat: 51.256074
   lng: 5.705399
   mainCourse: 1
-  starter:
-    name: 'Starter'
+  starter: 1
   dessert:
     name: 'Dessert'
 ,
