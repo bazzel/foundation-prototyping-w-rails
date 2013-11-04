@@ -1,4 +1,3 @@
-App.DessertView = Em.View.extend
-  didInsertElement: ->
-    @$().foundation =>
-      @$().find('section:first').addClass('active')
+#= require './dish_view'
+
+App.DessertView = App.DishView.extend()

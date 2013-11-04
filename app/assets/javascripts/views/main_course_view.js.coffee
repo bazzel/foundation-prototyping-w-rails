@@ -1,4 +1,3 @@
-App.MainCourseView = Em.View.extend
-  didInsertElement: ->
-    @$().foundation =>
-      @$().find('section:first').addClass('active')
+#= require './dish_view'
+
+App.MainCourseView = App.DishView.extend()
