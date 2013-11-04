@@ -7,3 +7,4 @@ App.Dinner = DS.Model.extend
   starter: DS.belongsTo 'starter'
   mainCourse: DS.belongsTo 'mainCourse'
   dessert: DS.belongsTo 'dessert'
+

@@ -1,4 +1,8 @@
 FoundationPrototypingWRails::Application.routes.draw do
+  resources :dishes
+
+  resources :starters
+
   resources :dinners
 
   resources :consumers
