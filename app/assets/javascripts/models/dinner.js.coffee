@@ -6,6 +6,7 @@ App.Dinner = DS.Model.extend
   lng: DS.attr 'number'
   starter: DS.belongsTo 'starter'
   mainCourse: DS.belongsTo 'mainCourse'
+  dessert: DS.belongsTo 'dessert'
 
 App.Dinner.FIXTURES = [
   id: 1
@@ -16,8 +17,7 @@ App.Dinner.FIXTURES = [
   lng: 5.705399
   mainCourse: 1
   starter: 1
-  dessert:
-    name: 'Dessert'
+  dessert: 1
 ,
   id: 2
   venue: 'Brasserie De Oude markt'

@@ -1,3 +1,4 @@
 App.DessertView = Em.View.extend
   didInsertElement: ->
-    @$().foundation()
+    @$().foundation =>
+      @$().find('section:first').addClass('active')

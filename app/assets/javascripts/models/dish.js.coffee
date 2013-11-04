@@ -42,4 +42,16 @@ App.Dish.FIXTURES = [
   id: 10
   name: 'Minestrone Ligure'
   consumers: [1,2,3]
+,
+  id: 11
+  name: 'Panna Cotta con Salsa al Kiwi'
+  consumers: [4,5,6,21,20]
+,
+  id: 12
+  name: 'Tiramisu'
+  consumers: [7,8,9,22]
+,
+  id: 13
+  name: 'Formaggi Misti'
+  consumers: [1,2,3,23]
 ]

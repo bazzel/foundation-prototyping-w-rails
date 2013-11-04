@@ -1,47 +1,15 @@
-<h3 class='subheader'>Dessert</h3>
+<h3 class='subheader'>{{name}}</h3>
 <div class="section-container vertical-tabs course" data-section="vertical-tabs">
-  <section class="active">
-    <p class="title" data-section-title><a href="#">Panna Cotta con Salsa al Kiwi</a></p>
-    <div class="content" data-section-content>
-      <ul>
-        <li>Johan Hoekjan</li>
-        <li>Harm de Laat</li>
-        <li>Matthijs Groen</li>
-        <li>Michel de Graaf</li>
-        <li>Pascal Widdershoven</li>
-        <li>Joost Saanen</li>
-        <li>João Bernardino</li>
-        <li>Marco Langenhuizen</li>
-        <li>Jean Mertz</li>
-      </ul>
-    </div>
-  </section>
-  <section>
-    <p class="title" data-section-title><a href="#">Tiramisu</a></p>
-    <div class="content" data-section-content>
-      <ul>
-        <li>Niels Stevens</li>
-        <li>Patrick Baselier</li>
-        <li>Rudi van der Made</li>
-      </ul>
-    </div>
-  </section>
-  <section>
-    <p class="title" data-section-title><a href="#">Formaggi Misti</a></p>
-    <div class="content" data-section-content>
-      <ul>
-        <li>Sander Voerman</li>
-        <li>Yvon Winkelmolen</li>
-        <li>Rui Salgado</li>
-        <li>Ariejan de Vroom</li>
-        <li>Arjan van der Gaag</li>
-        <li>andy.maes@kabisa.nl</li>
-        <li>Bas Heijmann</li>
-        <li>Giel Raijmakers</li>
-        <li>Ralph Deguelle</li>
-        <li>Remco Huijdts</li>
-      </ul>
-    </div>
-  </section>
+    {{#each dishes}}
+      <section>
+        <p class="title" data-section-title><a href="#">{{name}}</a></p>
+        <div class="content" data-section-content>
+          <ul>
+            {{#each consumers}}
+              <li>{{name}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </section>
+    {{/each}}
 </div>
-
