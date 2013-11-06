@@ -3,7 +3,8 @@ class DinnerSerializer < ActiveModel::Serializer
 
   attributes :id, :venue, :starts_at, :address, :lat, :lng
 
-  attribute :starts_at, key: 'startsAt'
+  #attribute :starts_at, key: 'startsAt'
 
   has_one :starter
+  has_one :main_course
 end

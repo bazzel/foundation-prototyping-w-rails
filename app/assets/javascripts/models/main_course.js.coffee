@@ -4,8 +4,13 @@ App.MainCourse = App.Course.extend
   name: DS.attr 'string'
   dishes:  DS.hasMany('dish')
 
-App.MainCourse.FIXTURES = [
-  id: 1
-  name: 'Main'
-  dishes: [1,2,3,4,5,6]
-]
+# https://github.com/emberjs/data/blob/master/TRANSITION.md#embedded-records
+App.MainCourseSerializer = DS.RESTSerializer.extend(
+  extractSingle: (store, type, payload, id, requestType) ->
+    console.log arguments
+    dishes = payload.mainCourse.dishes
+    dishIds = dishes.mapProperty("id")
+    payload.dishes = dishes
+    payload.mainCourse.dishes = dishIds
+    @_super.apply this, arguments
+)

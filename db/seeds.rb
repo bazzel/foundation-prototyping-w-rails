@@ -88,6 +88,48 @@ starter_names = [
 'Spicy Pumpkin Soup with Cilantro Pepita Pesto'
 ]
 
+main_course_names = [
+  'Bacon-wrapped Beef Tenderloin Steaks with Smoked Paprika Butter',
+  'Bacon, Tomato and Blue Cheese Focaccia Sandwich',
+  'Bacon and Cheese Quiche',
+  'Biscuits with Sausage Gravy',
+  'Blue Cheese Stuffed Hamburgers',
+  'B.L.A.T. Sandwich with Spicy Chipotle Mayonnaise',
+  'Butternut Squash Hash with Mexican Chorizo and Eggs',
+  'Cheddar, Chive, and Sour Cream Omelette',
+  'Creamy Cauliflower Soup with Bacon, Cheddar, and Chives',
+  'Crustless Quiche with Ham, Asparagus, and Gruyere',
+  'Curried Chicken Salad',
+  'Curried Turkey Salad with Apples, Cranberries, and Walnuts',
+  'Easy Egg Salad',
+  'Egg in a Nest',
+  'Farfalle with Pistachio Cream Sauce',
+  'Grilled Chicken and Pineapple Pizza',
+  'Grilled Rib Eye with Havarti Horseradish Fondue',
+  'Hearty Spinach and Sausage Soup',
+  'Herbed Tuna Salad with Feta and Pine Nuts',
+  'Homemade Sloppy Joes',
+  'Horseradish Meatloaf',
+  'Macaroni and Cheese with Bacon, Leeks, and Thyme',
+  'Monster Meatball Sandwiches',
+  'Pasta with Tomato-Cream Sauce and Fresh Basil',
+  'Roasted Chicken Thighs and Cauliflower',
+  'Simple Carne Asada',
+  'Smoky Spiced Black-Eyed Peas with Bacon',
+  'Southwestern Macaroni Casserole',
+  'Spice Rubbed Flank Steak',
+  'Spiced Turkey Burgers with Green Olives and Feta',
+  'Spiked Egg Nog French Toast',
+  'The Ultimate Manwich',
+  'Three Bean Vegetarian Chili',
+  'Tomato Paella with Chorizo',
+  'Tofu in Coconut Sauce with Ginger and Lemongrass',
+  'Tuna Noodle Casserole',
+  'Tuscan Chicken Under a Brick',
+  'Veggie Chili Beans and Rice',
+  'Whole Wheat Pasta with Browned Butter and Mizithra Cheese'
+]
+
 names.each do |name|
   Consumer.new.tap do |consumer|
     consumer.name = name
@@ -109,10 +151,10 @@ I18n.locale = 'nl'
     dinner.lng = "%9.7f" % (rand*2+5)
 
     dinner.build_starter(name: 'Starter')
+    (rand(6)+5).times { dinner.starter.dishes.build(name: starter_names.sample) }
 
-    (rand(6)+5).times do
-      dinner.starter.dishes.build(name: starter_names.sample)
-    end
+    dinner.build_main_course(name: 'Main')
+    (rand(6)+5).times { dinner.main_course.dishes.build(name: main_course_names.sample) }
     dinner.save
   end
 
