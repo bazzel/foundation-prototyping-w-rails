@@ -1,3 +1,3 @@
-Em.Handlebars.helper 'format-date', (date, format) ->
+Em.Handlebars.helper 'formatDate', (date, format) ->
   moment(date).format(format)
 , 'date'

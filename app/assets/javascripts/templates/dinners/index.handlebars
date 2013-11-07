@@ -3,8 +3,8 @@
     <div class='large-3 columns'>
       <div class='panel dinner-tile'>
         <h4 class='venue subheader'>{{venue}}</h4>
-        <h4>{{format-date startsAt 'h:mm a'}}</h4>
-        <p>{{format-date startsAt 'ddd, ll'}}</p>
+        <h4>{{formatDate startsAt 'h:mm a'}}</h4>
+        <p>{{formatDate startsAt 'ddd, ll'}}</p>
         {{#link-to 'dinner' this class='tiny secondary button'}}Details{{/link-to}}
       </div>
     </div>
