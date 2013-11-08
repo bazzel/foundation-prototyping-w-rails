@@ -1,3 +1,3 @@
-class Starter < ActiveRecord::Base
-  has_many :dishes, as: :dishable
+class Starter < Course
+  self.table_name = 'starters'
 end

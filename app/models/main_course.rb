@@ -1,3 +1,3 @@
-class MainCourse < ActiveRecord::Base
-  has_many :dishes, as: :dishable
+class MainCourse < Course
+  self.table_name = 'main_courses'
 end

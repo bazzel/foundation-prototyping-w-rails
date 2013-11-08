@@ -1,5 +1,5 @@
 App.DishView = Em.View.extend
   didInsertElement: ->
     Ember.run.next @, ->
-      @$().foundation =>
+      @$().foundation 'section', =>
         @$().find('section:first').addClass('active')
