@@ -130,6 +130,71 @@ main_course_names = [
   'Whole Wheat Pasta with Browned Butter and Mizithra Cheese'
 ]
 
+dessert_names = [
+  'Avocado Pie (Jagger Pie)',
+  'Apple Cinnamon Buttermilk Cake',
+  'Apple Galette',
+  'Apricot Almond Tart',
+  'Banana Cream Cheese Roll',
+  'Banana Milkshake',
+  'Basic Sugar Cookies',
+  'Blackberry Lemon Crisp',
+  'Blueberry and Strawberry Buttermilk Cake',
+  'Blueberry Breakfast Bars',
+  'Blueberry Lemon Cupcakes',
+  'Brown Sugar Shortbread',
+  'Brownie Ice Cream Sandwiches with Kahlua and Irish Cream',
+  'Butterscotch Corn Flake Candy',
+  'Butternut Squash Pudding',
+  'Caramel Apple Pear Cake',
+  'Caramel Cake',
+  'Caramelized Butter Frosting',
+  'Carrot Cake',
+  'Coconut Lime Cake',
+  'Coconut Cupcakes',
+  'Cream Cheese Frosting',
+  'Chai Snickerdoodles',
+  'Chocolate Stout Cupcakes',
+  'Cinnamon Vanilla Ice Cream',
+  'Double Chocolate Pumpkin Cupcakes',
+  'Easy Lemon Jello Cake',
+  'Fresh Peach Cobbler',
+  'Giant Lemon Sugar Cookies',
+  'Grilled Peaches with Blue Cheese and Honey',
+  'Heart-Shaped Cinnamon Rolls',
+  'Honey Almond Mini Cheesecakes',
+  'Hot Fudge Blondie Sundae',
+  'Lemon Bars',
+  'Lemon Buttermilk Popsicles',
+  'Lemon Buttermilk Pound Cake',
+  'Lemon Curd',
+  'Lemon Granita',
+  'Lemon Shortbread',
+  'Madeleines',
+  'Mini Cherry Cheesecakes',
+  'Mini Orange Cheesecakes with Grand Marnier Cream',
+  'Mini Pumpkin Cheesecakes With Cinnamon Cream',
+  'Oatmeal Coconut Chocolate Chip Cookies',
+  'Peach Sorbet',
+  'Persimmon Cookies',
+  'Praline Pumpkin Cake with Whipped Cream Frosting',
+  'Pumpkin Doughnuts',
+  'Pumpkin Roll',
+  'Pumpkin Spice Cake',
+  'Raspberry Almond Thumbprint Cookies',
+  'Red Velvet Cake',
+  'Rhubarb Blueberry Turnovers',
+  'Scandinavian Rosettes',
+  'Simple Yogurt Cake',
+  'Snickerdoodles',
+  'Sour Cream Pear Cake with Pecan Streusel',
+  'Strawberry Ice Cream',
+  'Strawberry Rhubarb Fool',
+  'Strawberry Shortcake',
+  'Tapioca Pudding with Vanilla and Lemon',
+  'Vanilla Bean Cream Cheese Frosting'
+]
+
 names.each do |name|
   Consumer.new.tap do |consumer|
     consumer.name = name
@@ -155,6 +220,9 @@ I18n.locale = 'nl'
 
     dinner.build_main_course(name: 'Main')
     (rand(6)+5).times { dinner.main_course.dishes.build(name: main_course_names.sample) }
+
+    dinner.build_dessert(name: 'Dessert')
+    (rand(6)+5).times { dinner.dessert.dishes.build(name: dessert_names.sample) }
     dinner.save
   end
 

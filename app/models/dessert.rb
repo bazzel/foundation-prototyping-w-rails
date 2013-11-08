@@ -1,0 +1,2 @@
+class Dessert < Course
+end

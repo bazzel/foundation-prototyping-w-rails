@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131105154919) do
+ActiveRecord::Schema.define(version: 20131104191432) do
 
   create_table "consumers", force: true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "courses", force: true do |t|
+    t.string   "name"
+    t.integer  "dinner_id"
+    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -33,20 +41,6 @@ ActiveRecord::Schema.define(version: 20131105154919) do
     t.string   "name"
     t.integer  "dishable_id"
     t.string   "dishable_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "main_courses", force: true do |t|
-    t.string   "name"
-    t.integer  "dinner_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "starters", force: true do |t|
-    t.string   "name"
-    t.integer  "dinner_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

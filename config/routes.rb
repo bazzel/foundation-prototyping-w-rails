@@ -1,6 +1,7 @@
 FoundationPrototypingWRails::Application.routes.draw do
   resources :main_courses
   resources :starters
+  resources :desserts
   resources :dinners
   resources :consumers
 
