@@ -216,13 +216,40 @@ I18n.locale = 'nl'
     dinner.lng = "%9.7f" % (rand*2+5)
 
     dinner.build_starter(name: 'Starter')
-    (rand(6)+5).times { dinner.starter.dishes.build(name: starter_names.sample) }
+    dish_names = starter_names.shuffle
+    # Not everyone is hungry...
+    consumers = Consumer.all.shuffle.first(rand(Consumer.count))
+    cnt = 0
+
+    # Split into even groups...
+    consumers.each_slice(3) do |group|
+      # ...and feed them.
+      dish = dinner.starter.dishes.build(name: dish_names[cnt])
+      dish.consumers = group
+      cnt += 1
+    end
 
     dinner.build_main_course(name: 'Main')
-    (rand(6)+5).times { dinner.main_course.dishes.build(name: main_course_names.sample) }
+    dish_names = starter_names.shuffle
+    consumers = Consumer.all.shuffle.first(rand(Consumer.count))
+    cnt = 0
+
+    consumers.each_slice(3) do |group|
+      dish = dinner.main_course.dishes.build(name: dish_names[cnt])
+      dish.consumers = group
+      cnt += 1
+    end
 
     dinner.build_dessert(name: 'Dessert')
-    (rand(6)+5).times { dinner.dessert.dishes.build(name: dessert_names.sample) }
+    dish_names = dessert_names.shuffle
+    consumers = Consumer.all.shuffle.first(rand(Consumer.count))
+    cnt = 0
+
+    consumers.each_slice(3) do |group|
+      dish = dinner.dessert.dishes.build(name: dish_names[cnt])
+      dish.consumers = group
+      cnt += 1
+    end
     dinner.save
   end
 
