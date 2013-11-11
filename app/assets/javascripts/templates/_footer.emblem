@@ -1,0 +1,7 @@
+footer.row
+  .large-12.columns
+    hr
+    .row
+      .large-6.columns © Copyright no one at all. Go to town.
+      .large-6.columns
+        img src="http://placehold.it/500x60&text=[links]"
