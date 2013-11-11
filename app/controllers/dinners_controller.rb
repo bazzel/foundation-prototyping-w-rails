@@ -1,6 +1,8 @@
 class DinnersController < ApplicationController
   def index
-    render json: Dinner.all
+    render json: Dinner.includes(starter: [dishes: :consumers],
+                                 main_course: [dishes: :consumers],
+                                 dessert: [dishes: :consumers])
   end
 
   def show
