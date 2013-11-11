@@ -1,3 +1,17 @@
+def feed_them(course, dish_names)
+  # Not everyone is hungry...
+  consumers = Consumer.all.shuffle.first(rand(Consumer.count)+1)
+  cnt = 0
+
+  # Split into even groups...
+  consumers.each_slice(rand(5)+3) do |group|
+    # ...and feed them.
+    dish = course.dishes.build(name: dish_names[cnt])
+    dish.consumers = group
+    cnt += 1
+  end
+end
+
 Consumer.destroy_all
 
 names = [
@@ -215,42 +229,12 @@ I18n.locale = 'nl'
     dinner.lat = "%9.7f" % (rand*2+51)
     dinner.lng = "%9.7f" % (rand*2+5)
 
-    dinner.build_starter(name: 'Starter')
-    dish_names = starter_names.shuffle
-    # Not everyone is hungry...
-    consumers = Consumer.all.shuffle.first(rand(Consumer.count))
-    cnt = 0
+    feed_them(dinner.build_starter(name: 'Starter'), starter_names.shuffle)
+    feed_them(dinner.build_main_course(name: 'Main'), starter_names.shuffle)
+    feed_them(dinner.build_dessert(name: 'Dessert'), dessert_names.shuffle)
 
-    # Split into even groups...
-    consumers.each_slice(3) do |group|
-      # ...and feed them.
-      dish = dinner.starter.dishes.build(name: dish_names[cnt])
-      dish.consumers = group
-      cnt += 1
-    end
-
-    dinner.build_main_course(name: 'Main')
-    dish_names = starter_names.shuffle
-    consumers = Consumer.all.shuffle.first(rand(Consumer.count))
-    cnt = 0
-
-    consumers.each_slice(3) do |group|
-      dish = dinner.main_course.dishes.build(name: dish_names[cnt])
-      dish.consumers = group
-      cnt += 1
-    end
-
-    dinner.build_dessert(name: 'Dessert')
-    dish_names = dessert_names.shuffle
-    consumers = Consumer.all.shuffle.first(rand(Consumer.count))
-    cnt = 0
-
-    consumers.each_slice(3) do |group|
-      dish = dinner.dessert.dishes.build(name: dish_names[cnt])
-      dish.consumers = group
-      cnt += 1
-    end
     dinner.save
   end
-
 end
+
+
