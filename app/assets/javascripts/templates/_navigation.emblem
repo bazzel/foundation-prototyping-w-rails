@@ -1,0 +1,12 @@
+.top-bar
+  ul.title-area
+    li.name
+      h1
+        linkTo "index" | Quarterly Dinner
+    li.toggle-topbar.menu-icon
+      a href="#"
+        span Menu
+  section.top-bar-section
+    ul.right
+      li
+        a href="" Login
