@@ -8,7 +8,8 @@
   .large-8.columns
     .panel
       h2
-        small Next:
+        small
+          ' Next:
         upcoming.venue
       p Lorem Ipsum
       linkTo 'starter' upcoming class='small button' | Details

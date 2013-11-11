@@ -1,0 +1,8 @@
+.row
+  each
+    .large-3.columns
+      .panel.dinner-tile
+        h4.venue.subheader = venue
+        h4 = formatDate startsAt 'h:mm a'
+        p = formatDate startsAt 'ddd, ll'
+        linkTo 'starter' this class='tiny secondary button' | Details

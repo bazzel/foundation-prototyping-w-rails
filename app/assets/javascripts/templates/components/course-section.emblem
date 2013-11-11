@@ -1,0 +1,10 @@
+h3.subheader = course.name
+.section-container.vertical-tabs.course data-section="vertical-tabs"
+  each course.dishes
+    section
+      p.title data-section-title=''
+        a href="#" = name
+      .content data-section-content=''
+        ul
+          each consumers
+            li = name
