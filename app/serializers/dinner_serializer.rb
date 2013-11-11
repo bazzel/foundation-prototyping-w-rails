@@ -1,5 +1,5 @@
 class DinnerSerializer < ActiveModel::Serializer
-  embed :ids
+  embed :ids, include: true
 
   attributes :id, :venue, :starts_at, :address, :lat, :lng
 

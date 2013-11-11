@@ -1,15 +1,15 @@
 <h3 class='subheader'>{{name}}</h3>
 <div class="section-container vertical-tabs course" data-section="vertical-tabs">
-    {{#each dishes}}
-      <section>
-        <p class="title" data-section-title><a href="#">{{name}}</a></p>
-        <div class="content" data-section-content>
-          <ul>
-            {{#each consumers}}
-              <li>{{name}}</li>
-            {{/each}}
-          </ul>
-        </div>
-      </section>
-    {{/each}}
+{{#each dishes}}
+  <section>
+    <p class="title" data-section-title><a href="#">{{name}}</a></p>
+    <div class="content" data-section-content>
+      <ul>
+        {{#each consumers}}
+          <li>{{name}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+{{/each}}
 </div>
